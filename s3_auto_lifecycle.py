@@ -16,6 +16,7 @@ as environment variables from the following list:
 * CLEAN
 * GLACIER_DAYS
 * LIFECYCLE_ID_PREFIX
+* NOOP
 
 License and Copyright
 ---------------------
