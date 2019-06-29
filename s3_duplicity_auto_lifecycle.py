@@ -69,7 +69,7 @@ parser.add_argument(
     '-g', '--glacier_days',
     nargs='?',
     type=int,
-    default=env.get('GLACIER_DAYS',7),
+    default=env.get('GLACIER_DAYS',60),
     help='Number of days before moving an archive to Glacier'
 )
 parser.add_argument(
