@@ -6,7 +6,7 @@
 for livecert in $(find /etc/letsencrypt/live/* -maxdepth 0 -type d) ; do
     CERTNAME=$(basename $livecert)
 
-    if CERTDATA=$(aws iam get-server-certificate --server-certificate-name "${CERTNAME}" "$@") ; then
+    if CERTDATA=$(aws iam get-server-certificate --server-certificate-name "${CERTNAME}" "$@" 2>/dev/null) ; then
         echo "IAM server certificate for ${CERTNAME} already exists!"
         echo "If you need to update it, delete it from AWS and then re-run this script."
         exit 1
