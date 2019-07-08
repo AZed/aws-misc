@@ -17,6 +17,6 @@ for livecert in $(find /etc/letsencrypt/live/* -maxdepth 0 -type d) ; do
         --certificate-body "file:///etc/letsencrypt/live/${CERTNAME}/cert.pem"   \
         --private-key "file:///etc/letsencrypt/live/${CERTNAME}/privkey.pem"     \
         --certificate-chain "file:///etc/letsencrypt/live/${CERTNAME}/chain.pem" \
-        --path "/cloudfront/${CERTNAME}/" \
+        --path "/cloudfront/" \
         "$@"
 done
