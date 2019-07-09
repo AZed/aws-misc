@@ -261,7 +261,7 @@ def lifecycle_update(bucket, archives):
 
 if(env.get('AWS_EXECUTION_ENV') is None):
     if(args.profile):
-        boto3.setup_default_session(profile_name='backup')
+        boto3.setup_default_session(profile_name=args.profile)
     archives = archives_in_bucket(args.bucket)
     lifecycle = lifecycle_update(args.bucket, archives)
     if(args.verbose):
